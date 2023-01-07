@@ -1,0 +1,17 @@
+<button nz-button nzType="primary" (click)="openModal()">Open Modal</button>
+
+<ng-template #modalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal Title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.close()">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-my-modal [data]="data"></app-my-modal>
+  </div>
+  <div class="modal-footer">
+    <button type="button" nz-button nzType="default" (click)="modal.close()">Close</button>
+  </div>
+</ng-template>
+
